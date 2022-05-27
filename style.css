@@ -1,0 +1,12 @@
+.invisivel{
+    visibility: hidden;
+}
+
+@media only screen and (min-width: 576px){
+    body{
+        background-image: url("img/bg.jpg");
+        background-size: cover;
+        background-position: center bottom;
+        min-height: 100vh;
+    }
+}
