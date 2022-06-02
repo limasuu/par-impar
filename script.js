@@ -1,3 +1,7 @@
+const OPCOESDIV= document.querySelector("#opcoes");
+const INSTRUCAOPAR= document.querySelector("#msgInstrucao");
+const RESULTADOPAR= document.querySelector("#msgResultado");
+const JOGARBUTTON= document.querySelector("#jogarNovamente");
 
 const definirParidade= () => Math.random()<0.5 ? true : false;
 
@@ -23,4 +27,17 @@ const definirSolucao= () => {
         },
         getQtnd: () => _qntd
     };
+};
+
+const jogar= () => { 
+
+    const paridade= definirParidade();
+    const acertos= definirAcertos();
+    const solucao= definirSolucao();
+
+    JOGARBUTTON.classList.add("invisivel");
+    RESULTADOPAR.classList.add("invisivel");
+    OPCOESDIV.innerHTML= "";
+
+
 };
