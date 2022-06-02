@@ -12,3 +12,15 @@ const definirAcertos= () => {
         getTotal: () => acertos        
     };
 };
+
+const definirSolucao= () => {
+    let _qntd;
+
+    return {
+        setQntd: qntd => {
+            if(_qntd === undefined)
+                _qntd= qntd;
+        },
+        getQtnd: () => _qntd
+    };
+};
