@@ -66,4 +66,26 @@ const jogar= () => {
         INSTRUCAOPAR.innerText= "Encontre os números ímpares!";    
 
 
+    CASINHAS.forEach( casinha => {
+        casinha.addEventListener('click', () => {
+                
+            casinha.classList.remove("btn-outline-primary");        
+        
+            if(avaliarParidade(casinha.innerHTML, paridade)){
+                acertos.add();                
+                casinha.classList.add("btn-success");
+        
+                if(acertos.getTotal() === solucao.getQtnd()){
+                    finalizar();
+                    RESULTADOPAR.innerText= "Você conseguiu!";
+                    RESULTADOPAR.classList.add("text-success");
+                }                        
+            }else{
+                casinha.classList.add("btn-danger");
+                finalizar();
+                RESULTADOPAR.innerText= `Você perdeu! Acertou ${acertos.getTotal()} número(s).`;
+                RESULTADOPAR.classList.add("text-danger");
+            }        
+        });
+    });
 };
