@@ -53,6 +53,17 @@ const jogar= () => {
     if(!avaliarParidade(CASINHAS[j].innerHTML, paridade))
         CASINHAS[j].innerHTML= parseInt(CASINHAS[j].innerHTML)+1;
         
-    
-    
+    const qntd= CASINHAS.filter( x => {
+            const numero= x.innerHTML;
+            return avaliarParidade(numero, paridade);       
+        }).length;
+    solucao.setQntd(qntd);
+
+
+    if(paridade)
+        INSTRUCAOPAR.innerText= "Encontre os números pares!";
+    else
+        INSTRUCAOPAR.innerText= "Encontre os números ímpares!";    
+
+
 };
