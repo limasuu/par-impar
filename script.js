@@ -40,4 +40,19 @@ const jogar= () => {
     OPCOESDIV.innerHTML= "";
 
 
+    for(let i=0; i<10; i++){
+        const CASINHA= document.createElement("button");
+        CASINHA.classList.add("btn", "btn-outline-primary", "mx-2", "my-1", "p-4");
+        OPCOESDIV.appendChild(CASINHA);
+
+        CASINHA.innerHTML= Math.floor(Math.random()*1000) + 1;
+    }
+    const CASINHAS= Array.from(OPCOESDIV.childNodes);
+    
+    const j= Math.floor(Math.random()*10);    
+    if(!avaliarParidade(CASINHAS[j].innerHTML, paridade))
+        CASINHAS[j].innerHTML= parseInt(CASINHAS[j].innerHTML)+1;
+        
+    
+    
 };
