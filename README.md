@@ -13,4 +13,8 @@ Utilizando a linguagem JavaScript são trabalhados conceitos como *Clousures* e 
 ## :art: Layout
 
 ![layout1](layout1.png)
+![layout2](layout2.png)
+![layout3](layout3.png)
+![layout4](layout4.png)
+![layout5](layout5.png)
 
