@@ -29,6 +29,13 @@ const definirSolucao= () => {
     };
 };
 
+const finalizar= () => {
+    JOGARBUTTON.classList.remove("invisivel");
+    RESULTADOPAR.classList.remove("invisivel");
+
+    OPCOESDIV.childNodes.forEach( casinha => casinha.setAttribute("disabled", ""));
+};
+
 const jogar= () => { 
 
     const paridade= definirParidade();
@@ -89,3 +96,7 @@ const jogar= () => {
         });
     });
 };
+
+
+JOGARBUTTON.addEventListener('click', () => jogar() );
+$(document).ready( () => jogar() );
